@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Profile</title>
+        <meta name="description" content="User Profile">
+        <meta name="keyword" content="profile,name,user information">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/080b1bc218.js" crossorigin="anonymous"></script>
+        
+        <style>
+            body{
+                margin:0;
+                min-width: 1000px;
+                background-image: url('bg.png');
+            }
+
+            #dashboardcontainer{
+                background-color: rgba(128, 128, 128, 0.863);
+                padding: 25px;
+            }
+
+            #container1{
+                display: flex;
+                justify-content: center;
+                height: 500px;
+            }
+
+            #profilecontainer{
+                background-color: rgba(243, 240, 240, 0.849);
+                margin-top: 60px;
+                margin-left: 100px;
+                margin-right: 100px;
+                width: 500px;
+                height: 350px;
+                border-radius: 80px;
+                text-align: center;
+                border-style: dotted;
+                border-color:rgba(97, 134, 151, 0.884);
+                padding-top: 30px;
+            }
+
+            .headertext{
+                color: rgba(0, 0, 0, 0.637);
+                font-size: 30px;
+                margin-top: -30px;
+                line-height: 20px ;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+            .profile-header-container{
+                height: 190px;
+                margin-top:-20px;
+                text-align: center;
+            }
+
+            .profile-header-img{
+                padding: 30px;
+            }
+
+            .profile-header-img > img.img-circle {
+                width: 130px;
+                height: 120px;
+                border: 2px solid #51D2B7;
+                border-radius: 50%;
+            }
+
+            .profile-header {
+                margin-top: 43px;
+            }
+
+                /**
+            * Ranking component
+            */
+            .rank-label-container {
+                margin-top: -18px;
+                color: white;
+                text-align: center;
+            }
+
+            .label.label-default.rank-label {
+                background-color: rgb(81, 210, 183);
+                padding: 5px 10px 5px 10px;
+                border-radius: 27px;
+            }
+
+            .user-info-block {
+                color: rgba(0, 0, 0, 0.795);
+                margin-top: -20px;
+                text-align: center;
+                border-radius: 30px;
+                height: 100px;
+                min-width: fit-content;
+           }
+
+            .user-heading {
+                text-align: center; 
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            .textbio{
+                text-align: center;
+                font-style: italic;
+                font-family: 'Courier New', Courier, monospace;
+                letter-spacing: -1px;
+            }
+
+            #buttoncontainer{
+                margin-top: -30px;
+                height: 40px;
+                text-align: center;
+                display:flex;
+                justify-content: center;
+            }
+
+            button{
+                padding:5px;
+                width: 200px;
+                height: 40px;
+                background-color: rgb(81, 210, 183);
+                color: white;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer; 
+            }
+
+            button:hover {
+                background-color: rgb(71, 173, 151);
+            }
+
+            button.active{
+                background-color: rgb(42, 104, 90);
+            }
+
+            .button1{
+                padding:5px;
+                width: 200px;
+                margin-right: 3px;
+                border-radius: 20px;
+                text-align:center;
+            }
+
+            .button2{
+                padding: 5px;
+                width: 200px;
+                margin-left: 3px;
+                border-radius: 20px;
+                text-align:center;
+            }
+
+            .tabcontent {
+                padding: 6px 12px;
+                margin-top: 20px;
+                display: none;
+            }
+
+            #userpostcontainer{
+                display: flex;
+                justify-content: center;
+                height: auto;
+                margin-top: 40px;
+                margin-left: 100px;
+                margin-right: 100px;
+            }
+
+            .userpostholder{
+                height: auto;
+                width: 700px;
+                border-radius: 30px;
+                background-color: rgba(243, 240, 240, 0.849);
+                border-style:groove;   
+                margin-bottom: 20px;
+            }
+
+            .userRecentPost-img{
+                display: flex;
+                padding: 10px;
+                
+            }
+
+            .userRecentPost-img > img.img-circlee {
+                width: 35px;
+                height: 30px;
+                border: 2px solid #51D2B7;
+                border-radius: 50%;
+            }
+
+            .userRecentPostName{
+                margin-top: 12px;
+                margin-right: 120px;
+                padding-left: 8px;
+                height: 20px;
+                width: 300px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: rgba(58, 56, 56, 0.877);
+                font-size: small;
+                font-weight: 900;
+            }
+
+            .userText{
+                height: 75px;
+                width: 640px;
+                margin-top: 5px;
+                margin-left: 25px;
+                font-family: 'Courier New', Courier, monospace;
+                color: rgba(44, 42, 42, 0.815);
+                background-color: rgba(233, 229, 229, 0.733);
+                border-radius: 15px;
+                padding: 5px;
+                font-weight: 500px;
+            }
+
+            .userDate{
+                height: 20px;
+                width: 150px;
+                margin-top: 12px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-style: italic;
+                border-color: gray;
+                border-style:double;
+                border-radius: 15px;
+                font-size: smaller;
+                font-weight: 300;
+                text-align: center;
+                background-color: rgba(218, 216, 216, 0.712);
+            }
+
+            .userTags{
+                width: 640px;
+                height: auto;
+                color: rgba(54, 54, 94, 0.575);
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                margin-left: 30px;
+                margin-top: 4px;
+                font-size: smaller;
+                font-weight: 20;
+                padding: 5px;
+            }
+
+            .userbuttonscontainer{
+                width: 650px;
+                height: 40px;
+                margin-left: 30px;
+                display: flex;
+                justify-content: flex-end;
+                padding-bottom: 8px;
+            }
+
+            .buttonsproperties{
+                height: 40px;
+                width: auto;
+            }
+
+            .dropdown{
+                position: relative;
+                display: inline-block;
+            }
+
+            /* Dropdown Content (Hidden by Default) */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #ebe7e7;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
+            }
+
+            /* Links inside the dropdown */
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+        
+        </style>
+
+        <script type="text/javascript">
+            function openTab(evt, Post) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(Post).style.display = "block";
+            evt.currentTarget.className += " active";
+            }
+            
+            function toggleUpvote(sender){
+                var uvoted = document.createElement("img");
+                uvoted.src = "upvoted.png";
+                var dvoted = document.createElement("img");
+                dvoted.src = "downvoted.png";
+
+                var image = document.getElementById(sender.id);
+                var nimage = document.getElementById(image.nextElementSibling.id);
+                
+                if(image.src != uvoted.src){
+                    if(nimage.src == dvoted.src){
+                        nimage.src = "downvote.png";
+                        image.src = 'upvoted.png';
+                    }
+                    else{
+                        image.src = 'upvoted.png';
+                    }
+                }
+                else if(image.src == uvoted.src){
+                    image.src = 'upvote.png';
+                }
+            }; 
+
+            function toggleDownvote(sender){
+                var uvoted = document.createElement("img");
+                uvoted.src = "upvoted.png";
+                var dvoted = document.createElement("img");
+                dvoted.src = "downvoted.png";
+
+                var image = document.getElementById(sender.id);
+                var pimage = document.getElementById(image.previousElementSibling.id);
+            
+                if(image.src != dvoted.src){
+                    if(pimage.src == uvoted.src){
+                        pimage.src = "upvote.png";
+                        image.src = 'downvoted.png';
+                    }
+                    else{
+                        image.src = 'downvoted.png';
+                    }
+                   
+                }
+                else if(image.src == dvoted.src){
+                    image.src = 'downvote.png';
+                }
+            }
+
+        </script>
+
+
+    </head>
+    <body>
+        <div id="container1">
+            <div id="profilecontainer">
+                <div class="headertext">
+                    <p>User Profile</p><hr>
+                </div>
+                <div class="profile-header-container">   
+                    <div class="profile-header-img">
+                        <img class="img-circle" src="human.jpg" />
+                        <div class="rank-label-container">
+                            <span class="label label-default rank-label">100 points</span>
+                        </div>
+                    </div>
+                    <div class="user-info-block">
+                        <div class="user-heading">
+                            <h2>Ira Villanueva <i class="fas fa-user-edit fa-xs"></i></h2>
+                        </div>
+                        <div class="textbio">i love web development!</div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div id="buttoncontainer">
+            <div class="button1">
+                <button class="tablinks" onclick = "openTab(event,'RecentPost');">Recent Posts</button>
+            </div>
+            <div class="button2">
+                <button class="tablinks" onclick = "openTab(event,'SavedPost');">Saved Posts</button>
+            </div>
+        </div>
+        <div id="userpostcontainer">
+            <div id="RecentPost" class="tabcontent">
+                
+                <div class="userpostholder">
+                    <div class="userRecentPost-img">
+                        <img class="img-circlee" src="human.jpg" />
+                        <div class="userRecentPostName">Ira Villanueva</div>
+                        <div class="userDate">02/25/20 11:42 pm</div>
+                        <div class ="dropdown">
+                            <img src="option.png" style="height: 25px; width: 23px; padding-top: 12px ; padding-left: 13px" id="option1">
+                            <div class="dropdown-content">
+                                <a href="#">Delete Post</a>
+                                <a href="#">Share</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="userText">I NEED 12 hrs of sleep :(</div>
+                    <div class="userTags">
+                        <span>Tags: #sleep #tired</span>
+                    </div>
+                    <div class="userbuttonscontainer">
+                        <div class="buttonsproperties">
+                            <img src="upvote.png" style="height: auto; width: 40px; padding-bottom: 4px; margin-left: 520px;" id="upvote1" onclick="toggleUpvote(this)">
+                            <img src="downvote.png" style="height: auto; width: 40px; padding-bottom: 4px;" id="downvote1" onclick="toggleDownvote(this)">
+                            <img src="comment.png" style="height: auto; width: 47px; margin-left: -5px;" id="comment1">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="userpostholder">
+                    <div class="userRecentPost-img">
+                        <img class="img-circlee" src="human.jpg" />
+                        <div class="userRecentPostName">Ira Villanueva</div>
+                        <div class="userDate">02/14/20 6:30 am</div>
+                        <div class="dropdown">
+                            <img src="option.png" style="height: 25px; width: 23px; padding-top: 12px ; padding-left: 13px" id="option2">
+                        </div>
+                    </div>
+                    <div class="userText">happy balentayms :P</div>
+                    <div class="userTags">
+                        <span>Tags: #valentines</span>
+                    </div>
+                    <div class="userbuttonscontainer">
+                        <div class="buttonsproperties">
+                            <img src="upvote.png" style="height: auto; width: 40px; padding-bottom: 4px; margin-left: 520px;" id="upvote2" onclick="toggleUpvote(this)">
+                            <img src="downvote.png" style="height: auto; width: 40px; padding-bottom: 4px;" id="downvote2" onclick="toggleDownvote(this)">
+                            <img src="comment.png" style="height: auto; width: 47px; margin-left: -5px;" id="comment2">
+                        </div>
+                    </div>
+                </div>
+                <div class="userpostholder">
+                    <div class="userRecentPost-img">
+                        <img class="img-circlee" src="human.jpg" />
+                        <div class="userRecentPostName">Ira Villanueva</div>
+                        <div class="userDate">02/01/20 12:13 am</div>
+                        <div class="dropdown">
+                            <img src="option.png" style="height: 25px; width: 23px; padding-top: 12px ; padding-left: 13px" id="option3">
+                            
+                        </div>
+                    </div>
+                    <div class="userText">getting a 4.0 in APPDEV??? i wish ??? HAHAHAHAHAHHDS HSJHDS JSHFJSDFH</div>
+                    <div class="userTags">
+                        <span>Tags: none</span>
+                    </div>
+                    <div class="userbuttonscontainer">
+                        <div class="buttonsproperties">
+                            <img src="upvote.png" style="height: auto; width: 40px; padding-bottom: 4px; margin-left: 520px;" id="upvote3" onclick="toggleUpvote(this)">
+                            <img src="downvote.png" style="height: auto; width: 40px; padding-bottom: 4px;" id="downvote3" onclick="toggleDownvote(this)">
+                            <img src="comment.png" style="height: auto; width: 47px; margin-left: -5px;" id="comment3">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="SavedPost" class="tabcontent">
+                <div class="userpostholder"></div>
+            </div>
+        </div>
+        
+    </body>
+</html>
