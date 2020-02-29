@@ -1,0 +1,13 @@
+.navbar-inverse {
+    background-color: #7539b9;
+    border-color:  #6f27c2;
+}
+
+.navbar-brand{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+}
