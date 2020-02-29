@@ -18,7 +18,7 @@ body{
 }
 
 .logo{
-    background-image: url('flooop.png');
+    background-image: url('logo.png');
     background-repeat: no-repeat;
     background-size: 70px 70px;
     display: inline-block;
