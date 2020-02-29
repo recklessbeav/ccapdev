@@ -18,13 +18,13 @@ body{
 }
 
 .logo{
-    background-image: url('flooop.png');
+    background-image: url('logo.png');
     background-repeat: no-repeat;
-    background-size: 70px 70px;
+    background-size: 150px 150px;
     display: inline-block;
     max-width: 100%;
-    width: 70px;
-    height: 70px;
+    width: 150px;
+    height: 150px;
 }
 
 .header a{

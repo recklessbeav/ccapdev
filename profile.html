@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Profile</title>
+        <meta name="description" content="User Profile">
+        <meta name="keyword" content="profile,name,user information">
+        <link href="profilestyle.css" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/080b1bc218.js" crossorigin="anonymous"></script>
+    
+        <script type="text/javascript">
+            function openTab(evt, Post){
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(Post).style.display = "block";
+            evt.currentTarget.className += " active";
+            }
+            
+            function toggleUpvote(sender){
+                var uvoted = document.createElement("img");
+                uvoted.src = "upvoted.png";
+                var dvoted = document.createElement("img");
+                dvoted.src = "downvoted.png";
+
+                var image = document.getElementById(sender.id);
+                var nimage = document.getElementById(image.nextElementSibling.id);
+                
+                if(image.src != uvoted.src){
+                    if(nimage.src == dvoted.src){
+                        nimage.src = "downvote.png";
+                        image.src = 'upvoted.png';
+                    }
+                    else{
+                        image.src = 'upvoted.png';
+                    }
+                }
+                else if(image.src == uvoted.src){
+                    image.src = 'upvote.png';
+                }
+            }; 
+
+            function toggleDownvote(sender){
+                var uvoted = document.createElement("img");
+                uvoted.src = "upvoted.png";
+                var dvoted = document.createElement("img");
+                dvoted.src = "downvoted.png";
+
+                var image = document.getElementById(sender.id);
+                var pimage = document.getElementById(image.previousElementSibling.id);
+            
+                if(image.src != dvoted.src){
+                    if(pimage.src == uvoted.src){
+                        pimage.src = "upvote.png";
+                        image.src = 'downvoted.png';
+                    }
+                    else{
+                        image.src = 'downvoted.png';
+                    }
+                }
+                else if(image.src == dvoted.src){
+                    image.src = 'downvote.png';
+                }
+            }
+
+        </script>
+
+
+    </head>
+    <body>
+        <div id="container1">
+            <div id="profilecontainer">
+                <div class="headertext">
+                    <p>User Profile</p><hr>
+                </div>
+                <div class="profile-header-container">   
+                    <div class="profile-header-img">
+                        <img class="img-circle" src="human.jpg" />
+                        <div class="rank-label-container">
+                            <span class="label label-default rank-label" title="Credit Score">54 points</span>
+                        </div>
+                    </div>
+                    <div class="user-info-block">
+                        <div class="user-heading">
+                            <h2>Ira Villanueva <i class="fas fa-user-edit fa-xs" title="Edit Profile"></i></h2>
+                        </div>
+                        <div class="textbio" title="User's Bio">i love web development!</div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div id="buttoncontainer">
+            <div class="button1">
+                <button class="tablinks" onclick = "openTab(event,'RecentPost');" title="Recent Posts">Recent Posts</button>
+            </div>
+            <div class="button2">
+                <button class="tablinks" onclick = "openTab(event,'SavedPost');" title="Saved Posts">Saved Posts</button>
+            </div>
+        </div>
+        <div id="userpostcontainer">
+            <div id="RecentPost" class="tabcontent">
+                <div class="userpostholder">
+                    <div class="userRecentPost-img">
+                        <img class="img-circlee" src="human.jpg" />
+                        <div class="userRecentPostName">Ira Villanueva <div class="userCreditScore" title="Credit Score">(54 pts)</div></div>
+                        <div class="userDate" title="Date">02/25/20 11:42 pm</div>
+                        <div class ="dropdown">
+                            <img src="option.png" style="height: 25px; width: 23px; padding-top: 12px ; padding-left: 13px" id="option1" title="Option">
+                            <div class="dropdown-content">
+                                <a href="#">Delete Post</a>
+                                <a href="#">Share</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="userText">I NEED 12 hrs of sleep :(</div>
+                    <div class="userTags" title="Tags">
+                        <span>Tags: #sleep #tired</span>
+                    </div>
+                    <div class="userbuttonscontainer">
+                        <div class="upvotecount" title="Upvote Count"><p>32 upvotes</p></div>
+                        <div class="buttonsproperties">
+                            <img src="upvote.png" style="height: auto; width: 40px; padding-bottom: 10px; margin-left: 402px;" id="upvote1" onclick="toggleUpvote(this)" title="Upvote">
+                            <img src="downvote.png" style="height: auto; width: 40px; padding-bottom: 10px;" id="downvote1" onclick="toggleDownvote(this)" title="Downvote">
+                            <img src="comment.png" style="height: auto; width: 47px; padding-bottom:6.5px; margin-left: -2px;" id="comment1" title="Comment">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="userpostholder">
+                    <div class="userRecentPost-img">
+                        <img class="img-circlee" src="human.jpg" />
+                        <div class="userRecentPostName">Ira Villanueva<div class="userCreditScore" title="Credit Score">(54 pts)</div></div>
+                        <div class="userDate" title="Date">02/14/20 6:30 am</div>
+                        <div class ="dropdown">
+                            <img src="option.png" style="height: 25px; width: 23px; padding-top: 12px ; padding-left: 13px" id="option2" title="Option">
+                            <div class="dropdown-content">
+                                <a href="#">Delete Post</a>
+                                <a href="#">Share</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="userText">happy balentayms :P</div>
+                    <div class="userTags" title="Tags">
+                        <span>Tags: #valentines</span>
+                    </div>
+                    <div class="userbuttonscontainer">
+                        <div class="upvotecount" title="Upvote Count"><p>61 upvotes</p></div>
+                        <div class="buttonsproperties">
+                            <img src="upvote.png" style="height: auto; width: 40px; padding-bottom: 10px; margin-left: 402px;" id="upvote2" onclick="toggleUpvote(this)" title="Upvote">
+                            <img src="downvote.png" style="height: auto; width: 40px; padding-bottom: 10px;" id="downvote2" onclick="toggleDownvote(this)" title="Downvote">
+                            <img src="comment.png" style="height: auto; width: 47px; padding-bottom: 6.5px; margin-left: -2px;" id="comment2" title="Comment">
+                        </div>
+                    </div>
+                </div>
+                <div class="userpostholder">
+                    <div class="userRecentPost-img">
+                        <img class="img-circlee" src="human.jpg" />
+                        <div class="userRecentPostName">Ira Villanueva <div class="userCreditScore" title="Credit Score">(54 pts)</div></div>
+                        <div class="userDate" title="Date">02/01/20 12:13 am</div>
+                        <div class ="dropdown">
+                            <img src="option.png" style="height: 25px; width: 23px; padding-top: 12px ; padding-left: 13px" id="option3" title="Option">
+                            <div class="dropdown-content">
+                                <a href="#">Delete Post</a>
+                                <a href="#">Share</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="userText">getting a 4.0 in APPDEV??? i wish ??? HAHAHAHAHAHHDS HSJHDS JSHFJSDFH</div>
+                    <div class="userTags">
+                        <span>Tags: none</span>
+                    </div>
+                    <div class="userbuttonscontainer">
+                        <div class="upvotecount" title="Upvote Count"><p>101 upvotes</p></div>
+                        <div class="buttonsproperties">
+                            <img src="upvote.png" style="height: auto; width: 40px; padding-bottom: 10px; margin-left: 402px;" id="upvote3" onclick="toggleUpvote(this)" title="Upvote">
+                            <img src="downvote.png" style="height: auto; width: 40px; padding-bottom: 10px;" id="downvote3" onclick="toggleDownvote(this)" title="Downvote">
+                            <img src="comment.png" style="height: auto; width: 47px; padding-bottom:6.5px; margin-left: -2px;" id="comment3" title="Comment">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="SavedPost" class="tabcontent">
+                <div class="userpostholder">
+                    <div class="userRecentPost-img">
+                        <img class="img-circlee" src="boy.png" />
+                        <div class="userRecentPostName">Collin_Field123 <div class="userCreditScore" title="Credit Score">(98 pts)</div></div>
+                        <div class="userDate" title="Date">02/02/20 11:11 pm</div>
+                        <div class ="dropdown">
+                            <img src="option.png" style="height: 25px; width: 23px; padding-top: 12px ; padding-left: 13px" id="option4" title="Option">
+                            <div class="dropdown-content">
+                                <a href="#">Remove Saved Post</a>
+                                <a href="#">Share</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="userText">Comment down your fave movies and tv shows!!</div>
+                    <div class="userTags">
+                        <span>Tags: #movies #tvshows #moviethread #tvshowthread</span>
+                    </div>
+                    <div class="userbuttonscontainer">
+                        <div class="upvotecount" title="Upvote Count"><p>649 upvotes</p></div>
+                        <div class="buttonsproperties">
+                            <img src="upvote.png" style="height: auto; width: 40px; padding-bottom: 10px; margin-left: 402px;" id="upvote4" onclick="toggleUpvote(this)" title="Upvote">
+                            <img src="downvote.png" style="height: auto; width: 40px; padding-bottom: 10px;" id="downvote4" onclick="toggleDownvote(this)" title="Downvote"> 
+                            <img src="comment.png" style="height: auto; width: 47px; padding-bottom: 6.5px; margin-left: -2px;" id="comment4" title="Comment">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
