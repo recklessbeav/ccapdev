@@ -94,8 +94,16 @@
     margin-top: 5%;
 }
 
+.userCreditScoree{
+    height: auto;
+    width: auto;
+    font-size: 9px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(128, 128, 128);
+}
+
 .post-area{
-    width: 652px;
+    width: 625px;
     height: 50px;
     resize: none;
     padding-top: 0px;
@@ -313,7 +321,7 @@ hr {
     text-align: -webkit-match-parent;
 }
 
-.userTags{
+.userTagss{
     width: 640px;
     height: auto;
     color: rgba(54, 54, 94, 0.575);
@@ -325,7 +333,7 @@ hr {
     padding: 5px;
 }
 
-.userbuttonscontainer{
+.userbuttonscontainerr{
     margin-top: 5px;
     width: 590px;
     height: 40px;
@@ -334,7 +342,7 @@ hr {
     padding-bottom: 8px;
 }
 
-.upvotecount{
+.upvotecountt{
     height: 40px;
     width: 450px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -345,7 +353,7 @@ hr {
     color: rgb(104, 102, 102);
 }
 
-.buttonsproperties{
+.buttonspropertiess{
     height: auto;
     width: auto;
 }
@@ -388,6 +396,7 @@ hr {
 
 .left-bar {
     width: 27%;
+    height: 500px;
     position: fixed;
     left: 72%;
 }
