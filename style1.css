@@ -98,6 +98,10 @@
     margin-top: 5%;
 }
 
+.midcenter{
+    margin-left: 5%;
+}
+
 .userCreditScoree{
     height: auto;
     width: auto;
@@ -408,6 +412,8 @@ hr {
     padding: 10px 10px 3px;
 }
 
+
+
 .sidenav {
     height: 100%;
     width: 230px;
@@ -415,7 +421,7 @@ hr {
     z-index: 1;
     top: 0;
     left: 0;
-    border-right: 1px solid #dddd;
+    
     overflow-x: hidden;
     padding-top: 25px;
 }
@@ -479,4 +485,8 @@ hr {
     border: 1px solid rgb(151, 148, 148);
     background-color: rgba(240, 238, 235, 0.555);
     border-radius: 15px;
+}
+.text-left{
+    border-right: 1px solid #dddd;
+    border-left: 1px solid #dddd;
 }
