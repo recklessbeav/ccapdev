@@ -43,7 +43,11 @@
 }
 
 .post-area{
+<<<<<<< Updated upstream
     width: 800px;
+=======
+    width: 652px;
+>>>>>>> Stashed changes
     height: 50px;
     resize: none;
     padding-top: 0px;
@@ -239,8 +243,56 @@ hr {
 }
 
 .media-button-post{
-    margin-left: 475px;
+    margin-left: 336px;
     display: inline-block;
     text-align: -webkit-match-parent;
 }
 
+<<<<<<< Updated upstream
+=======
+.userTags{
+    width: 640px;
+    height: auto;
+    color: rgba(54, 54, 94, 0.575);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 30px;
+    margin-top: 4px;
+    font-size: smaller;
+    font-weight: 20;
+    padding: 5px;
+}
+
+.img-circle {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #51D2B7;
+    border-radius: 50%;
+    
+}
+
+.p-name{
+    font-size: 20px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.timeline-body{
+    text-align: justify;
+}
+
+.sidenav {
+    height: 100%;
+    width: 230px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #dddd;
+    overflow-x: hidden;
+    padding-top: 75px;
+}
+
+.center-post{
+    margin-left: 230px;
+}
+>>>>>>> Stashed changes
