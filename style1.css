@@ -408,6 +408,8 @@ hr {
     padding: 10px 10px 3px;
 }
 
+
+
 .sidenav {
     height: 100%;
     width: 230px;
@@ -415,7 +417,7 @@ hr {
     z-index: 1;
     top: 0;
     left: 0;
-    border-right: 1px solid #dddd;
+    
     overflow-x: hidden;
     padding-top: 25px;
 }
@@ -445,4 +447,9 @@ hr {
 
 .middle-post{
     border-right: 1px solid #dddd;
+}
+
+.text-left{
+    border-right: 1px solid #dddd;
+    border-left: 1px solid #dddd;
 }
