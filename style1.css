@@ -39,11 +39,6 @@
 }
 
 .dropdown {
-<<<<<<< Updated upstream
-    float: left;
-    overflow: hidden;
-  }
-=======
     position: relative;
     display: inline-block;
 }
@@ -51,7 +46,6 @@
 .prof{
     margin-top: 14px;
 }
->>>>>>> Stashed changes
   
 .dropdown .dropbtn {
     cursor: pointer;
