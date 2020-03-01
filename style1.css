@@ -291,6 +291,12 @@ hr {
     text-align: -webkit-match-parent;
 }
 
+.media-button-timeline{
+    margin-left: 220px;
+    display: inline-block;
+    text-align: -webkit-match-parent;
+}
+
 .userTags{
     width: 640px;
     height: auto;
