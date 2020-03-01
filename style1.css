@@ -45,8 +45,12 @@
 .dropdown {
     position: relative;
     display: inline-block;
+}
+
+.prof{
     margin-top: 14px;
-  }
+}
+
   
 .dropdown .dropbtn {
     cursor: pointer;
