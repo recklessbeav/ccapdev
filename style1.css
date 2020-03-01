@@ -359,3 +359,6 @@ hr {
     border-radius: 27px;
 }
 
+.middle-post{
+    border-right: 1px solid #dddd;
+}
