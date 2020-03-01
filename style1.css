@@ -337,3 +337,19 @@ hr {
     margin-left: 230px;
 }
 
+.left-bar {
+    width: 27%;
+}
+
+.rank-label-container {
+    margin-top: -18px;
+    color: white;
+    text-align: center;
+}
+
+.label.label-default.rank-label {
+    background-color: rgb(81, 210, 183);
+    padding: 5px 10px 5px 10px;
+    border-radius: 27px;
+}
+
