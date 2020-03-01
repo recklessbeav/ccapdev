@@ -43,11 +43,7 @@
 }
 
 .post-area{
-<<<<<<< Updated upstream
-    width: 800px;
-=======
     width: 652px;
->>>>>>> Stashed changes
     height: 50px;
     resize: none;
     padding-top: 0px;
@@ -248,8 +244,6 @@ hr {
     text-align: -webkit-match-parent;
 }
 
-<<<<<<< Updated upstream
-=======
 .userTags{
     width: 640px;
     height: auto;
@@ -295,4 +289,3 @@ hr {
 .center-post{
     margin-left: 230px;
 }
->>>>>>> Stashed changes
