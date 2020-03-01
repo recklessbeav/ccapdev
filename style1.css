@@ -490,3 +490,8 @@ hr {
     border-right: 1px solid #dddd;
     border-left: 1px solid #dddd;
 }
+
+
+.indiv-left{
+    left: 75%
+}
