@@ -1,28 +1,32 @@
 
-
 .navbar-inverse {
-    background-color: rgb(81, 210, 183);;
-    border-color: rgb(35, 184, 151);;
+    background-color: rgb(81, 210, 183);
+    border-color: rgb(35, 184, 151);
+    box-shadow: 0px 3px 2px rgb(31, 168, 139);
 }
 
 .navbar-admu {
     background-color: #003a6c;
-    border-color:  #003a6c;
+    border-color:  #01315c;
+    box-shadow: 0px 3px 2px #01294d;
 }
 
 .navbar-dlsu {
     background-color: #00703c;
-    border-color:  #00703c;
+    border-color:  #006335;
+    box-shadow: 0px 3px 2px #01552e;
 }
 
 .navbar-up {
     background-color: #7B1113;
-    border-color:  #7B1113;
+    border-color:  rgb(107, 14, 16);
+    box-shadow: 0px 3px 2px rgb(92, 12, 14);
 }
 
 .navbar-ust {
     background-color: #FEC00F;
-    border-color:  #FEC00F;
+    border-color:  rgb(238, 178, 13);
+    box-shadow: 0px 3px 2px rgb(223, 167, 12);
 }
 
 .navbar-brand{
