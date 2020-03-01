@@ -1,28 +1,32 @@
 
-
 .navbar-inverse {
-    background-color: rgb(81, 210, 183);;
-    border-color: rgb(35, 184, 151);;
+    background-color: rgb(81, 210, 183);
+    border-color: rgb(35, 184, 151);
+    box-shadow: 0px 3px 2px rgb(31, 168, 139);
 }
 
 .navbar-admu {
     background-color: #003a6c;
-    border-color:  #003a6c;
+    border-color:  #01315c;
+    box-shadow: 0px 3px 2px #01294d;
 }
 
 .navbar-dlsu {
     background-color: #00703c;
-    border-color:  #00703c;
+    border-color:  #006335;
+    box-shadow: 0px 3px 2px #01552e;
 }
 
 .navbar-up {
     background-color: #7B1113;
-    border-color:  #7B1113;
+    border-color:  rgb(107, 14, 16);
+    box-shadow: 0px 3px 2px rgb(92, 12, 14);
 }
 
 .navbar-ust {
     background-color: #FEC00F;
-    border-color:  #FEC00F;
+    border-color:  rgb(238, 178, 13);
+    box-shadow: 0px 3px 2px rgb(223, 167, 12);
 }
 
 .navbar-brand{
@@ -46,13 +50,14 @@
 .prof{
     margin-top: 14px;
 }
+
   
 .dropdown .dropbtn {
     cursor: pointer;
     font-size: 16px;  
     border: none;
     outline: none;
-    color: white;
+    color: #4b4f56;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -93,8 +98,16 @@
     margin-top: 5%;
 }
 
+.userCreditScoree{
+    height: auto;
+    width: auto;
+    font-size: 9px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(128, 128, 128);
+}
+
 .post-area{
-    width: 652px;
+    width: 625px;
     height: 50px;
     resize: none;
     padding-top: 0px;
@@ -208,7 +221,7 @@
     overflow: hidden;
     border-top: 1px solid #e9ebee;
     margin: 0 1px;
-    padding: 8px 0;
+    padding: 8px 0;        
 }
 
 .buttons-post-icons {
@@ -216,13 +229,24 @@
     margin: 0;
     padding: 0;
     display: block;
-    list-style-type: disc;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-top: 10px;
     padding-inline-start: 0px;
+}
+
+.timeline-title{
+    font-weight: bold;
+}
+
+.timeline-author{
+    height: auto;
+    width: fit-content;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+    color: rgb(104, 101, 101);
 }
 
 .media-button{
@@ -269,7 +293,7 @@ hr {
     text-overflow: ellipsis;
     vertical-align: middle;
     white-space: nowrap;
-    width: 100%;
+    width: 100%;    
 }
 
 .media-post{
@@ -301,24 +325,48 @@ hr {
     text-align: -webkit-match-parent;
 }
 
-.userTags{
+.userTagss{
     width: 640px;
     height: auto;
     color: rgba(54, 54, 94, 0.575);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-left: 30px;
+    margin-left: -4px;
     margin-top: 4px;
     font-size: smaller;
     font-weight: 20;
     padding: 5px;
 }
 
+.userbuttonscontainerr{
+    margin-top: 5px;
+    width: 590px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 8px;
+}
+
+.upvotecountt{
+    height: 40px;
+    width: 450px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 10px;
+    padding-left: -20px;
+    padding-top: 15px;
+    text-align: left;
+    color: rgb(104, 102, 102);
+}
+
+.buttonspropertiess{
+    height: auto;
+    width: auto;
+}
+
 .img-circle {
-    width: 200px;
-    height: 200px;
+    width: 125px;
+    height: 125px;
     border: 2px solid #51D2B7;
     border-radius: 50%;
-
 }
 
 .p-name{
@@ -329,18 +377,21 @@ hr {
 
 .timeline-body{
     text-align: justify;
+    background-color: rgba(233, 231, 231, 0.87);
+    border-radius: 15px;
+    padding: 10px;
 }
 
 .sidenav {
     height: 100%;
     width: 230px;
-    position: fixed;
+    position: relative;
     z-index: 1;
     top: 0;
     left: 0;
     border-right: 1px solid #dddd;
     overflow-x: hidden;
-    padding-top: 75px;
+    padding-top: 25px;
 }
 
 .center-post{
@@ -349,6 +400,9 @@ hr {
 
 .left-bar {
     width: 27%;
+    height: 500px;
+    position: fixed;
+    left: 72%;
 }
 
 .rank-label-container {
