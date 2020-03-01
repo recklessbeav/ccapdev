@@ -45,6 +45,7 @@
 .dropdown {
     position: relative;
     display: inline-block;
+    margin-top: 14px;
   }
   
 .dropdown .dropbtn {
@@ -314,8 +315,8 @@ hr {
 }
 
 .img-circle {
-    width: 200px;
-    height: 200px;
+    width: 125px;
+    height: 125px;
     border: 2px solid #51D2B7;
     border-radius: 50%;
 
@@ -334,13 +335,13 @@ hr {
 .sidenav {
     height: 100%;
     width: 230px;
-    position: fixed;
+    position: relative;
     z-index: 1;
     top: 0;
     left: 0;
     border-right: 1px solid #dddd;
     overflow-x: hidden;
-    padding-top: 75px;
+    padding-top: 25px;
 }
 
 .center-post{
@@ -349,6 +350,8 @@ hr {
 
 .left-bar {
     width: 27%;
+    position: fixed;
+    left: 72%;
 }
 
 .rank-label-container {
